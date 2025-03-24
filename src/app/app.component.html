@@ -1,8 +1,10 @@
 <div class="h-dvh flex dark:bg-gray-800">
   <div class="w-[20%] md:block hidden"></div>
-  <div class="md:w-[80%] w-full dark:bg-gray-900 bg-gray-200 flex flex-col p-4">
-    <div class="grow">
-      <div class="overflow-auto grow" *ngFor="let chat of chats">
+  <div
+    class="md:w-[80%] w-full h-dvh dark:bg-gray-900 grow bg-gray-200 flex flex-col p-4"
+  >
+    <div class="grow overflow-auto">
+      <div class="" *ngFor="let chat of chats">
         <li
           [ngClass]="
             chat.author == 'me'
@@ -25,24 +27,22 @@
       </div>
     </div>
 
-    <div>
-      <div class="flex gap-2 items-center">
-        <input
-          type="text"
-          id="first_name"
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
-          placeholder="Write Your Query..."
-          required
-          [(ngModel)]="inputText"
-        />
-        <button
-          type="button"
-          (click)="sendApiRequest()"
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
-        >
-          Send
-        </button>
-      </div>
+    <div class="flex gap-2 items-center">
+      <input
+        type="text"
+        id="first_name"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+        placeholder="Write Your Query..."
+        required
+        [(ngModel)]="inputText"
+      />
+      <button
+        type="button"
+        (click)="sendApiRequest()"
+        class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+      >
+        Send
+      </button>
     </div>
   </div>
 </div>
